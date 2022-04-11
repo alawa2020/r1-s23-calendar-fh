@@ -7,8 +7,10 @@ import { CalendarScreen } from '../components/calendar/CalendarScreen'
 export const AppRouter = () => {
   return (
     <Router>
-      <Route exact path="/auth" component={ AuthScreen } />
-      <Route exact path="/" component={ CalendarScreen } />
+      <Switch>
+        <Route exact path="/auth" component={ AuthScreen } />
+        <Route exact path="/" component={ CalendarScreen } />
+      </Switch>
     </Router>
   )
 }
