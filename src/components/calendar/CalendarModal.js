@@ -200,20 +200,57 @@ export const CalendarModal = () => {
               />
             </div>
             <div className="col-6">
-              <label 
-                htmlFor="exampleColorInput" 
+              <label
                 className="form-label"
               >
                 Text Color
               </label>
-              <input 
-                type="color" 
-                className="form-control form-control-color" id="exampleColorInput" 
-                title="Choose your color" 
-                name="textColor"
-                value={ textColor }
-                onChange={ handleInputChange }
-              />
+
+              <div className="row">
+                <div className="div col-4">
+                  <div className="form-check form-check-inline">
+                    <input 
+                      className="form-check-input" 
+                      type="radio" 
+                      name="textColor" 
+                      id="white"
+                      value="#ffffff"
+                      onChange={ handleInputChange }
+                      checked={ textColor === '#ffffff'}
+                    />
+                    <label className="form-check-label" htmlFor="white">
+                      White
+                    </label>
+                  </div>
+                  <div className="form-check form-check-inline">
+                    <input 
+                      className="form-check-input" 
+                      type="radio" 
+                      id="black"
+                      name="textColor"
+                      value="#000000"
+                      onChange={ handleInputChange }
+                      checked={ textColor === '#000000'}
+                    />
+                    <label className="form-check-label" htmlFor="black">
+                      Black
+                    </label>
+                  </div>
+                </div>
+                <div className="div col-8">
+                  <input
+                    type="color"
+                    className="form-control form-control-color" id="exampleColorInput"
+                    title="Choose your color"
+                    value={ textColor }
+                    disabled
+                  />
+                </div>
+              </div>
+
+
+
+              
             </div>
 
           </div>
